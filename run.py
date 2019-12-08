@@ -4,7 +4,6 @@ import numpy as np
 # Klasa r
 
 #System 1
-<<<<<<< HEAD
 lam_0_1 = 1
 A_list =[
     [-1, 0, 0, 0, 0],
@@ -21,9 +20,6 @@ print "\n"
 print "System 1"
 print "Lambda"
 print lam_1
-=======
-lam_0_1 = 1/15
->>>>>>> c0d9ad670af2f76374a0aa0a3cec6b146c1509ec
 
 #System 2
 lam_0_2 = 1
@@ -72,8 +68,11 @@ b_list = [[0], [lam_0_4]]
 
 A = np.array(A_list)
 b = np.array(b_list)
-X_4 = np.linalg.inv(A).dot(b)
-print X_4
+lam_4 = np.linalg.inv(A).dot(b)
+print "\n"
+print "System 4"
+print "Lambda"
+print lam_4
 
 #System 5
 lam_0_1 = 1
