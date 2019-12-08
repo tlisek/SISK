@@ -1,9 +1,4 @@
-lam_0_1 = 1
-lam_0_2 = 1
-lam_0_3 = 1
-lam_0_4 = 1
-lam_0_5 = 1
-
+#Liczba kanalow w systemach 3...8
 
 m_3 = 2
 m_4 = 1
@@ -11,12 +6,3 @@ m_5 = 1
 m_6 = 1
 m_7 = 1
 m_8 = 1
-
-mi_1 = 1
-mi_2 = 1
-mi_3 = 1
-mi_4 = 1
-mi_5 = 1
-mi_6 = 1
-mi_7 = 1
-mi_8 = 1

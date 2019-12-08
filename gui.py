@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
+import solve_K as K_Solver
 
 root = tk.Tk()
 root.title("Kolejki")
@@ -7,20 +8,28 @@ root.title("Kolejki")
 root.config(bg='#ECECEC')
 root.resizable(0, 0) #Don't allow resizing in the x or y direction
 
+lambda_1_0 = tk.DoubleVar(root, value=1/2.0)
+lambda_2_0 = tk.DoubleVar(root, value=1/2.0)
+lambda_3_0 = tk.DoubleVar(root, value=1/2.0)
+lambda_4_0 = tk.DoubleVar(root, value=1/2.0)
+lambda_5_0 = tk.DoubleVar(root, value=1/2.0)
+
+mi_1 = tk.DoubleVar(root, value=1/2.0)
+mi_2 = tk.DoubleVar(root, value=1/2.0)
+mi_3 = tk.DoubleVar(root, value=1/2.0)
+mi_4 = tk.DoubleVar(root, value=1/2.0)
+mi_5 = tk.DoubleVar(root, value=1/2.0)
+mi_6 = tk.DoubleVar(root, value=1/2.0)
+mi_7 = tk.DoubleVar(root, value=1/2.0)
+mi_8 = tk.DoubleVar(root, value=1/2.0)
+
 def runBtnCallback():
-    print "Run"
 
+    lambda_0 = [lambda_1_0.get(), lambda_2_0.get(), lambda_3_0.get(), lambda_4_0.get(), lambda_5_0.get() ]
+    mi = [mi_1.get(), mi_2.get(), mi_3.get(), mi_4.get(), mi_5.get(), mi_6.get(), mi_7.get(), mi_8.get() ]
 
-lambda_1_0 = tk.IntVar(root, value=1/2.0)
-lambda_2_0 = tk.IntVar(root, value=1/2.0)
+    K_Solver.solve_K(lambda_0, mi)
 
-
-mi_1 = tk.IntVar(root, value=1/2.0)
-mi_2 = tk.IntVar(root, value=1/2.0)
-
-
-def runBtnCallback():
-    print 'Run'
 
 lambdas_frame = ttk.Frame(root, relief='raised', borderwidth=1)
 lambdas_frame.pack(fill='both', expand=False)
@@ -62,7 +71,7 @@ mi_frame.pack(fill='both', expand=False)
 mi_frame_row0 = ttk.Frame(mi_frame)
 mi_frame_row0.pack(fill='both', expand=False)
 
-mi_label = ttk.Label(mi_frame_row0, text="Mi startowe")
+mi_label = ttk.Label(mi_frame_row0, text="Mi")
 mi_label.pack(side='left', fill='both', padx=5, pady=5)
 
 
