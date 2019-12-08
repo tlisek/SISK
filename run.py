@@ -33,4 +33,16 @@ lam_0_1 = 1/15
 
 
 #System 5
+<<<<<<< HEAD
 lam_0_1 = 1/15
+=======
+
+
+import numpy as np
+A = np.matrix([[1,2],[3,4]])
+B = np.matrix([35], [94])
+
+A_inv = np.linalg.inv(A)
+
+X = A_inv * B
+>>>>>>> fe85b22a3116fbd648780b719b5fa5c1a5367d25
