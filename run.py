@@ -18,8 +18,8 @@ b_list = [[0],[0],[0],[lam_0_2]]
 
 A = np.array(A_list)
 b = np.array(b_list)
-X = np.linalg.inv(A).dot(b)
-print X
+X_2 = np.linalg.inv(A).dot(b)
+print X_2
 
 #System 3
 lam_0_3 = 1
@@ -33,8 +33,8 @@ b_list = [[0],[0],[0],[lam_0_2]]
 
 A = np.array(A_list)
 b = np.array(b_list)
-X = np.linalg.inv(A).dot(b)
-print X
+X_3 = np.linalg.inv(A).dot(b)
+print X_3
 
 
 #System 4
