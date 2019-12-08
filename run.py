@@ -7,25 +7,34 @@ import numpy as np
 lam_0_1 = 1/15
 
 #System 2
-
-lam_0_2 = 1/15
+lam_0_2 = 1
 A_list =[
     [0.1, 0.1, 1, -1],
     [0.6, -1, 0, 0],
-    [0.3, 0.9, -1, 0],
+    [0.3, 0.9, -1, 0.1],
     [1, 0, 0, 0]
 ]
-
 b_list = [[0],[0],[0],[lam_0_2]]
 
 A = np.array(A_list)
 b = np.array(b_list)
 X = np.linalg.inv(A).dot(b)
-
 print X
 
 #System 3
-lam_0_1 = 1/15
+lam_0_3 = 1
+A_list =[
+    [0.1, 0.1, 1, -1],
+    [0.6, -1, 0, 0],
+    [0.3, 0.9, -1, 0.1],
+    [1, 0, 0, 0]
+]
+b_list = [[0],[0],[0],[lam_0_2]]
+
+A = np.array(A_list)
+b = np.array(b_list)
+X = np.linalg.inv(A).dot(b)
+print X
 
 
 #System 4
@@ -33,16 +42,4 @@ lam_0_1 = 1/15
 
 
 #System 5
-<<<<<<< HEAD
 lam_0_1 = 1/15
-=======
-
-
-import numpy as np
-A = np.matrix([[1,2],[3,4]])
-B = np.matrix([35], [94])
-
-A_inv = np.linalg.inv(A)
-
-X = A_inv * B
->>>>>>> fe85b22a3116fbd648780b719b5fa5c1a5367d25
