@@ -47,7 +47,7 @@ A_list =[
     [0.3, 0.9, -1, 0.1],
     [1, 0, 0, 0]
 ]
-b_list = [[0],[0],[0],[lam_0_2]]
+b_list = [[0],[0],[0],[lam_0_3]]
 
 A = np.array(A_list)
 b = np.array(b_list)
