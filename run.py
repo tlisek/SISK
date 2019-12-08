@@ -14,3 +14,12 @@
 
 
 #System 5
+
+
+import numpy as np
+A = np.matrix([[1,2],[3,4]])
+B = np.matrix([35], [94])
+
+A_inv = np.linalg.inv(A)
+
+X = A_inv * B
