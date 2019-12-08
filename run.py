@@ -75,4 +75,17 @@ print "Lambda"
 print lam_4
 
 #System 5
-lam_0_1 = 1
+lam_0_5 = 1
+A_list = [
+    [1, -1],
+    [1, 0]
+]
+b_list = [[0], [lam_0_5]]
+
+A = np.array(A_list)
+b = np.array(b_list)
+lam_5 = np.linalg.inv(A).dot(b)
+print "\n"
+print "System 5"
+print "Lambda"
+print lam_5
