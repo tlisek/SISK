@@ -1,7 +1,6 @@
 # System i
 # Klasa r
 
-
 #System 1
 
 
