@@ -51,6 +51,27 @@ def solve_K(lambda_0, mi):
     print [K_1_1, K_1_2, K_1_3, K_1_4, K_1_5]
 
 
+    #System 2 - Typ IS
+    print "System 2:"
+
+    #Klasa 1
+    K_2_1 = calc_K_IS(lam[2][1], mi_2)
+
+    #Klasa 2
+    K_2_2 = calc_K_IS(lam[2][2], mi_2)
+
+    #Klasa 3
+    K_2_3 = calc_K_IS(lam[2][3], mi_2)
+
+    #Klasa 4
+    #W systemie 2 nie ma klasy 4
+
+    #Klasa 5
+    #W systemie 2 nie ma klasy 4
+
+    print [K_2_1, K_2_2, K_2_3]
+
+
     # System 3 - Typ FIFO
     print "System 3:"
 
@@ -75,3 +96,119 @@ def solve_K(lambda_0, mi):
     K_3_2 = calc_K_FIFO(m_3, ro_3_2, ro_3)
     K_3_3 = calc_K_FIFO(m_3, ro_3_3, ro_3)
     print [K_3_1, K_3_2, K_3_3]
+
+
+    #System 4 - Typ FIFO
+    print "System 4"
+
+    #Klasa 1
+    ro_4_1 = lam[4][1]/(m_4 * mi_4)
+
+    #Klasa 2
+    #W systemie 4 nie ma klasy 2
+
+    #Klasa 3
+    #W systemie 4 nie ma klasy 3
+
+    #Klasa 4
+    #W systemie 4 nie ma klasy 4
+
+    #Klasa 5
+    #W systemie 4 nie ma klasy 5
+
+    ro_4 = ro_4_1
+    K_4_1 = calc_K_FIFO(m_4, ro_4_1, ro_4)
+    print [K_4_1]
+
+
+    #System 5 - Typ FIFO
+    print "System 5"
+
+    #Klasa 1
+    ro_5_1 = lam[5][1]/(m_5 * mi_5)
+
+    #Klasa 2
+    ro_5_2 = lam[5][2]/(m_5 * mi_5)
+
+    #Klasa 3
+    #W systemie 5 nie ma klasy 3
+
+    #Klasa 4
+    #W systemie 5 nie ma klasy 4
+
+    #Klasa 5
+    #W systemie 5 nie ma klasy 5
+
+    ro_5 = (ro_5_1 + ro_5_2)/2.0
+    K_5_1 = calc_K_FIFO(m_5, ro_5_1, ro_5)
+    K_5_2 = calc_K_FIFO(m_5, ro_5_2, ro_5)
+    print [K_5_1, K_5_2]
+
+
+    #System 6 - Typ FIFO
+    print "System 6"
+
+    #Klasa 1
+    #W systemie 6 nie ma klasy 1
+
+    #Klasa 2
+    #W systemie 6 nie ma klasy 2
+
+    #Klasa 3
+    #W systemie 6 nie ma klasy 3
+
+    #Klasa 4
+    ro_6_4 = lam[6][4]/(m_6 * mi_6)
+
+    #Klasa 5
+    #W systemie 6 nie ma klasy 5
+
+    ro_6 = ro_6_4
+    K_6_4 = calc_K_FIFO(m_6, ro_6_4, ro_4)
+    print [K_6_4]
+
+
+    #System 7 - Typ FIFO
+    print "System 7"
+
+    #Klasa 1
+    #W systemie 7 nie ma klasy 1
+
+    #Klasa 2
+    #W systemie 7 nie ma klasy 2
+
+    #Klasa 3
+    ro_7_3 = lam[7][3]/(m_7 * mi_7)
+
+    #Klasa 4
+    #W systemie 7 nie ma klasy 4
+
+    #Klasa 5
+    #W systemie 7 nie ma klasy 5
+
+    ro_7 = ro_7_3
+    K_7_3 = calc_K_FIFO(m_7, ro_7_3, ro_7)
+    print [K_7_3]
+
+
+    #System 8 - Typ FIFO
+    print "System 8"
+
+    #Klasa 1
+    #W systemie 8 nie ma klasy 1
+
+    #Klasa 2
+    #W systemie 8 nie ma klasy 2
+
+    #Klasa 3
+    #W systemie 8 nie ma klasy 3
+
+    #Klasa 4
+    #W systemie 8 nie ma klasy 4
+
+    #Klasa 5
+    ro_8_5 = lam[8][5]/(m_8 * mi_8)
+
+    ro_8 = ro_8_5
+    K_8_5 = calc_K_FIFO(m_8, ro_8_5, ro_8)
+    print [K_8_5]

@@ -21,8 +21,8 @@ mi_3 = tk.DoubleVar(root, value=1/2.0)
 mi_4 = tk.DoubleVar(root, value=1/2.0)
 mi_5 = tk.DoubleVar(root, value=1/2.0)
 mi_6 = tk.DoubleVar(root, value=1/2.0)
-mi_7 = tk.DoubleVar(root, value=1/2.0)
-mi_8 = tk.DoubleVar(root, value=1/2.0)
+mi_7 = tk.DoubleVar(root, value=3/2.0) #dla mi<1 otrzymujemy ujemne K
+mi_8 = tk.DoubleVar(root, value=3/2.0) #dla mi<1 otrzymujemy ujemne K
 
 def runBtnCallback():
 
