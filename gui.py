@@ -29,11 +29,21 @@ def runBtnCallback():
     lambda_0 = [lambda_1_0.get(), lambda_2_0.get(), lambda_3_0.get(), lambda_4_0.get(), lambda_5_0.get() ]
     mi = [mi_1.get(), mi_2.get(), mi_3.get(), mi_4.get(), mi_5.get(), mi_6.get(), mi_7.get(), mi_8.get() ]
 
-    K_Solver.solve_K(lambda_0, mi)
+    K = K_Solver.solve_K(lambda_0, mi)
+
+    result_system_1_val['text'] = K[1]
+    result_system_2_val['text'] = K[2]
+    result_system_3_val['text'] = K[3]
+    result_system_4_val['text'] = K[4]
+    result_system_5_val['text'] = K[5]
+    result_system_6_val['text'] = K[6]
+    result_system_7_val['text'] = K[7]
+    result_system_8_val['text'] = K[8]
 
 #Lambdas frame
 lambdas_frame = ttk.Frame(root, relief='raised', borderwidth=1)
 lambdas_frame.grid(row = 0, column = 0)
+# lambdas_frame.place(width = 300)
 # lambdas_frame.pack(fill='both', expand=False)
 
 #Naglowek
@@ -188,7 +198,7 @@ mi_8_val.pack(expand=True, fill='both', padx=5, pady=5)
 
 #Result frame
 result_frame = ttk.Frame(root, relief='raised', borderwidth=1)
-result_frame.grid(row = 0, column = 1, rowspan = 3)
+result_frame.grid(row = 0, column = 1, rowspan = 2)
 # result_frame.pack(fill = 'both', expand = False, side = "right")
 
 result_frame_row0 = ttk.Frame(result_frame)
@@ -204,77 +214,101 @@ result_frame_row1.pack(fill='both', expand=False)
 result_system_1_label = ttk.Label(result_frame_row1, text="System 1:")
 result_system_1_label.pack(side='left', fill='both', padx=5, pady=5)
 
-result_system_1_val = ttk.Label(result_frame_row1, text="wartosci")
-result_system_1_val.pack(side='left', fill='both', padx=5, pady=5)
-
-#System 2
 result_frame_row2 = ttk.Frame(result_frame)
 result_frame_row2.pack(fill='both', expand=False)
 
-result_system_2_label = ttk.Label(result_frame_row2, text="System 2:")
-result_system_2_label.pack(side='left', fill='both', padx=5, pady=5)
+result_system_1_val = ttk.Label(result_frame_row2)
+result_system_1_val.pack(side='left', fill='both', padx=5, pady=5)
 
-result_system_2_val = ttk.Label(result_frame_row2, text="wartosci")
-result_system_2_val.pack(side='left', fill='both', padx=5, pady=5)
-
-#System 3
+#System 2
 result_frame_row3 = ttk.Frame(result_frame)
 result_frame_row3.pack(fill='both', expand=False)
 
-result_system_3_label = ttk.Label(result_frame_row3, text="System 3:")
-result_system_3_label.pack(side='left', fill='both', padx=5, pady=5)
+result_system_2_label = ttk.Label(result_frame_row3, text="System 2:")
+result_system_2_label.pack(side='left', fill='both', padx=5, pady=5)
 
-result_system_3_val = ttk.Label(result_frame_row3, text="wartosci")
-result_system_3_val.pack(side='left', fill='both', padx=5, pady=5)
-
-#System 4
 result_frame_row4 = ttk.Frame(result_frame)
 result_frame_row4.pack(fill='both', expand=False)
 
-result_system_4_label = ttk.Label(result_frame_row4, text="System 4:")
-result_system_4_label.pack(side='left', fill='both', padx=5, pady=5)
+result_system_2_val = ttk.Label(result_frame_row4)
+result_system_2_val.pack(side='left', fill='both', padx=5, pady=5)
 
-result_system_4_val = ttk.Label(result_frame_row4, text="wartosci")
-result_system_4_val.pack(side='left', fill='both', padx=5, pady=5)
-
-#System 5
+#System 3
 result_frame_row5 = ttk.Frame(result_frame)
 result_frame_row5.pack(fill='both', expand=False)
 
-result_system_5_label = ttk.Label(result_frame_row5, text="System 5:")
-result_system_5_label.pack(side='left', fill='both', padx=5, pady=5)
+result_system_3_label = ttk.Label(result_frame_row5, text="System 3:")
+result_system_3_label.pack(side='left', fill='both', padx=5, pady=5)
 
-result_system_5_val = ttk.Label(result_frame_row5, text="wartosci")
-result_system_5_val.pack(side='left', fill='both', padx=5, pady=5)
-
-#System 6
 result_frame_row6 = ttk.Frame(result_frame)
 result_frame_row6.pack(fill='both', expand=False)
 
-result_system_6_label = ttk.Label(result_frame_row6, text="System 6:")
-result_system_6_label.pack(side='left', fill='both', padx=5, pady=5)
+result_system_3_val = ttk.Label(result_frame_row6)
+result_system_3_val.pack(side='left', fill='both', padx=5, pady=5)
 
-result_system_6_val = ttk.Label(result_frame_row6, text="wartosci")
-result_system_6_val.pack(side='left', fill='both', padx=5, pady=5)
-
-#System 7
+#System 4
 result_frame_row7 = ttk.Frame(result_frame)
 result_frame_row7.pack(fill='both', expand=False)
 
-result_system_7_label = ttk.Label(result_frame_row7, text="System 7:")
-result_system_7_label.pack(side='left', fill='both', padx=5, pady=5)
+result_system_4_label = ttk.Label(result_frame_row7, text="System 4:")
+result_system_4_label.pack(side='left', fill='both', padx=5, pady=5)
 
-result_system_7_val = ttk.Label(result_frame_row7, text="wartosci")
-result_system_7_val.pack(side='left', fill='both', padx=5, pady=5)
-
-#System 8
 result_frame_row8 = ttk.Frame(result_frame)
 result_frame_row8.pack(fill='both', expand=False)
 
-result_system_8_label = ttk.Label(result_frame_row8, text="System 8:")
+result_system_4_val = ttk.Label(result_frame_row8)
+result_system_4_val.pack(side='left', fill='both', padx=5, pady=5)
+
+#System 5
+result_frame_row9 = ttk.Frame(result_frame)
+result_frame_row9.pack(fill='both', expand=False)
+
+result_system_5_label = ttk.Label(result_frame_row9, text="System 5:")
+result_system_5_label.pack(side='left', fill='both', padx=5, pady=5)
+
+result_frame_row10 = ttk.Frame(result_frame)
+result_frame_row10.pack(fill='both', expand=False)
+
+result_system_5_val = ttk.Label(result_frame_row10)
+result_system_5_val.pack(side='left', fill='both', padx=5, pady=5)
+
+#System 6
+result_frame_row11 = ttk.Frame(result_frame)
+result_frame_row11.pack(fill='both', expand=False)
+
+result_system_6_label = ttk.Label(result_frame_row11, text="System 6:")
+result_system_6_label.pack(side='left', fill='both', padx=5, pady=5)
+
+result_frame_row12 = ttk.Frame(result_frame)
+result_frame_row12.pack(fill='both', expand=False)
+
+result_system_6_val = ttk.Label(result_frame_row12)
+result_system_6_val.pack(side='left', fill='both', padx=5, pady=5)
+
+#System 7
+result_frame_row13 = ttk.Frame(result_frame)
+result_frame_row13.pack(fill='both', expand=False)
+
+result_system_7_label = ttk.Label(result_frame_row13, text="System 7:")
+result_system_7_label.pack(side='left', fill='both', padx=5, pady=5)
+
+result_frame_row14 = ttk.Frame(result_frame)
+result_frame_row14.pack(fill='both', expand=False)
+
+result_system_7_val = ttk.Label(result_frame_row14)
+result_system_7_val.pack(side='left', fill='both', padx=5, pady=5)
+
+#System 8
+result_frame_row15 = ttk.Frame(result_frame)
+result_frame_row15.pack(fill='both', expand=False)
+
+result_system_8_label = ttk.Label(result_frame_row15, text="System 8:")
 result_system_8_label.pack(side='left', fill='both', padx=5, pady=5)
 
-result_system_8_val = ttk.Label(result_frame_row8, text="wartosci")
+result_frame_row16 = ttk.Frame(result_frame)
+result_frame_row16.pack(fill='both', expand=False)
+
+result_system_8_val = ttk.Label(result_frame_row16)
 result_system_8_val.pack(side='left', fill='both', padx=5, pady=5)
 
 #Bottom frame

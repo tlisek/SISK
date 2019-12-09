@@ -213,3 +213,16 @@ def solve_K(lambda_0, mi):
     K_8_5 = calc_K_FIFO(m_8, ro_8_5, ro_8)
     print [K_8_5]
     #test
+
+    # K[system][klasa]
+    K = {
+        1 : { 1: K_1_1, 2: K_1_2, 3: K_1_3, 4: K_1_4, 5: K_1_5},
+        2 : { 1: K_2_1, 2: K_2_2, 3: K_2_3, 4: None, 5: None},
+        3 : { 1: K_3_1, 2: K_3_2, 3: K_3_3, 4: None, 5: None},
+        4 : { 1: K_4_1, 2: None, 3: None, 4: None, 5: None},
+        5 : { 1: K_5_1, 2: K_5_2, 3: None, 4: None, 5: None},
+        6 : { 1: None, 2: None, 3: None, 4: K_6_4, 5: None},
+        7 : { 1: None, 2: None, 3: K_7_3, 4: None, 5: None},
+        8 : { 1: None, 2: None, 3: None, 4: None, 5: K_8_5},
+    }
+    return K
