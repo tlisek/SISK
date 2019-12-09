@@ -1,5 +1,6 @@
-import tkinter as tk
-from tkinter import ttk
+import Tkinter as tk
+#from Tkinter import ttk
+import ttk
 import solve_K as K_Solver
 
 root = tk.Tk()
@@ -30,18 +31,18 @@ def runBtnCallback():
 
     K_Solver.solve_K(lambda_0, mi)
 
-
+#Lambdas frame
 lambdas_frame = ttk.Frame(root, relief='raised', borderwidth=1)
 lambdas_frame.pack(fill='both', expand=False)
 
-
+#Naglowek
 lambdas_frame_row0 = ttk.Frame(lambdas_frame)
 lambdas_frame_row0.pack(fill='both', expand=False)
 
 lambda_label = ttk.Label(lambdas_frame_row0, text="Lambda startowe")
 lambda_label.pack(side='left', fill='both', padx=5, pady=5)
 
-
+#Klasa 1
 lambdas_frame_row1 = ttk.Frame(lambdas_frame)
 lambdas_frame_row1.pack(fill='both', expand=False)
 
@@ -51,7 +52,7 @@ lambda_1_0_label.pack(side='left', fill='both', padx=5, pady=5)
 lambda_1_0_val = ttk.Entry(lambdas_frame_row1, textvariable=lambda_1_0)
 lambda_1_0_val.pack(expand=True, fill='both', padx=5, pady=5)
 
-
+#Klasa 2
 lambdas_frame_row2 = ttk.Frame(lambdas_frame)
 lambdas_frame_row2.pack(fill='both', expand=False)
 
@@ -61,20 +62,49 @@ lambda_2_0_label.pack(side='left', fill='both', padx=5, pady=5)
 lambda_2_0_val = ttk.Entry(lambdas_frame_row2, textvariable=lambda_2_0)
 lambda_2_0_val.pack(expand=True, fill='both', padx=5, pady=5)
 
+#Klasa 3
+lambdas_frame_row3 = ttk.Frame(lambdas_frame)
+lambdas_frame_row3.pack(fill='both', expand=False)
 
+lambda_3_0_label = ttk.Label(lambdas_frame_row3, text="Klasa 3")
+lambda_3_0_label.pack(side='left', fill='both', padx=5, pady=5)
 
+lambda_3_0_val = ttk.Entry(lambdas_frame_row3, textvariable=lambda_3_0)
+lambda_3_0_val.pack(expand=True, fill='both', padx=5, pady=5)
 
+#Klasa 4
+lambdas_frame_row4 = ttk.Frame(lambdas_frame)
+lambdas_frame_row4.pack(fill='both', expand=False)
+
+lambda_4_0_label = ttk.Label(lambdas_frame_row4, text="Klasa 4")
+lambda_4_0_label.pack(side='left', fill='both', padx=5, pady=5)
+
+lambda_4_0_val = ttk.Entry(lambdas_frame_row4, textvariable=lambda_4_0)
+lambda_4_0_val.pack(expand=True, fill='both', padx=5, pady=5)
+
+#Klasa 5
+lambdas_frame_row5 = ttk.Frame(lambdas_frame)
+lambdas_frame_row5.pack(fill='both', expand=False)
+
+lambda_5_0_label = ttk.Label(lambdas_frame_row5, text="Klasa 5")
+lambda_5_0_label.pack(side='left', fill='both', padx=5, pady=5)
+
+lambda_5_0_val = ttk.Entry(lambdas_frame_row5, textvariable=lambda_5_0)
+lambda_5_0_val.pack(expand=True, fill='both', padx=5, pady=5)
+
+#Mi frame
+# mi = \u03BC
 mi_frame = ttk.Frame(root, relief='raised', borderwidth=1)
 mi_frame.pack(fill='both', expand=False)
 
-
+#Naglowek
 mi_frame_row0 = ttk.Frame(mi_frame)
 mi_frame_row0.pack(fill='both', expand=False)
 
-mi_label = ttk.Label(mi_frame_row0, text="Mi")
+mi_label = ttk.Label(mi_frame_row0, text=u'\u03BC')
 mi_label.pack(side='left', fill='both', padx=5, pady=5)
 
-
+#System 1
 mi_frame_row1 = ttk.Frame(mi_frame)
 mi_frame_row1.pack(fill='both', expand=False)
 
@@ -84,7 +114,7 @@ mi_1_label.pack(side='left', fill='both', padx=5, pady=5)
 mi_1_val = ttk.Entry(mi_frame_row1, textvariable=mi_1)
 mi_1_val.pack(expand=True, fill='both', padx=5, pady=5)
 
-
+#System 2
 mi_frame_row2 = ttk.Frame(mi_frame)
 mi_frame_row2.pack(fill='both', expand=False)
 
@@ -94,6 +124,65 @@ mi_2_label.pack(side='left', fill='both', padx=5, pady=5)
 mi_2_val = ttk.Entry(mi_frame_row2, textvariable=mi_2)
 mi_2_val.pack(expand=True, fill='both', padx=5, pady=5)
 
+#System 3
+mi_frame_row3 = ttk.Frame(mi_frame)
+mi_frame_row3.pack(fill='both', expand=False)
+
+mi_3_label = ttk.Label(mi_frame_row3, text="System 3")
+mi_3_label.pack(side='left', fill='both', padx=5, pady=5)
+
+mi_3_val = ttk.Entry(mi_frame_row3, textvariable=mi_3)
+mi_3_val.pack(expand=True, fill='both', padx=5, pady=5)
+
+#System 4
+mi_frame_row4 = ttk.Frame(mi_frame)
+mi_frame_row4.pack(fill='both', expand=False)
+
+mi_4_label = ttk.Label(mi_frame_row4, text="System 4")
+mi_4_label.pack(side='left', fill='both', padx=5, pady=5)
+
+mi_4_val = ttk.Entry(mi_frame_row4, textvariable=mi_4)
+mi_4_val.pack(expand=True, fill='both', padx=5, pady=5)
+
+#System 5
+mi_frame_row5 = ttk.Frame(mi_frame)
+mi_frame_row5.pack(fill='both', expand=False)
+
+mi_5_label = ttk.Label(mi_frame_row5, text="System 5")
+mi_5_label.pack(side='left', fill='both', padx=5, pady=5)
+
+mi_5_val = ttk.Entry(mi_frame_row5, textvariable=mi_5)
+mi_5_val.pack(expand=True, fill='both', padx=5, pady=5)
+
+#System 6
+mi_frame_row6 = ttk.Frame(mi_frame)
+mi_frame_row6.pack(fill='both', expand=False)
+
+mi_6_label = ttk.Label(mi_frame_row6, text="System 6")
+mi_6_label.pack(side='left', fill='both', padx=5, pady=5)
+
+mi_6_val = ttk.Entry(mi_frame_row6, textvariable=mi_6)
+mi_6_val.pack(expand=True, fill='both', padx=5, pady=5)
+
+#System 7
+mi_frame_row7 = ttk.Frame(mi_frame)
+mi_frame_row7.pack(fill='both', expand=False)
+
+mi_7_label = ttk.Label(mi_frame_row7, text="System 7")
+mi_7_label.pack(side='left', fill='both', padx=5, pady=5)
+
+mi_7_val = ttk.Entry(mi_frame_row7, textvariable=mi_7)
+mi_7_val.pack(expand=True, fill='both', padx=5, pady=5)
+
+#System 8
+mi_frame_row8 = ttk.Frame(mi_frame)
+mi_frame_row8.pack(fill='both', expand=False)
+
+mi_8_label = ttk.Label(mi_frame_row8, text="System 8")
+mi_8_label.pack(side='left', fill='both', padx=5, pady=5)
+
+mi_8_val = ttk.Entry(mi_frame_row8, textvariable=mi_8)
+mi_8_val.pack(expand=True, fill='both', padx=5, pady=5)
 
 
 frame_bottom = ttk.Frame(root)
