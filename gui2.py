@@ -47,9 +47,9 @@ def print_result(K):
     for (value,i) in zip(K.values(), range(6)):
         # print value
         if value == None:
-            tmp = "K"+str(i)+" : None "
+            tmp = "K"+str(i+1)+" : -- "
         else:
-            tmp = "K"+str(i)+": " + "{0:.4f} ".format(round(value,4))
+            tmp = "K"+str(i+1)+": " + "{0:.4f} ".format(round(value,2))
         result += tmp
 
     return result
