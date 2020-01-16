@@ -17,8 +17,17 @@ lambda_3_0 = DoubleVar(root, value=1/2.0)
 lambda_4_0 = DoubleVar(root, value=1/2.0)
 lambda_5_0 = DoubleVar(root, value=1/2.0)
 
-mi_1 = DoubleVar(root, value=1/2.0)
-mi_2 = DoubleVar(root, value=1/2.0)
+#mi_numersystemu_numerklasy
+mi_1_1 = DoubleVar(root, value=1/2.0)
+mi_1_2 = DoubleVar(root, value=1/2.0)
+mi_1_3 = DoubleVar(root, value=1/2.0)
+mi_1_4 = DoubleVar(root, value=1/2.0)
+mi_1_5 = DoubleVar(root, value=1/2.0)
+mi_2_1 = DoubleVar(root, value=1/2.0)
+mi_2_2 = DoubleVar(root, value=1/2.0)
+mi_2_3 = DoubleVar(root, value=1/2.0)
+mi_2_4 = StringVar(root, value='--') #W systemie 2 nie ma klas 4 ani 5
+mi_2_5 = StringVar(root, value='--')
 mi_3 = DoubleVar(root, value=1/2.0)
 mi_4 = DoubleVar(root, value=1/2.0)
 mi_5 = DoubleVar(root, value=1/2.0)
@@ -29,8 +38,9 @@ mi_8 = DoubleVar(root, value=3/2.0) #dla mi<1 otrzymujemy ujemne K
 def runBtnCallback():
 
     lambda_0 = [lambda_1_0.get(), lambda_2_0.get(), lambda_3_0.get(), lambda_4_0.get(), lambda_5_0.get() ]
-    mi = [mi_1.get(), mi_2.get(), mi_3.get(), mi_4.get(), mi_5.get(), mi_6.get(), mi_7.get(), mi_8.get() ]
-
+    mi_1= [mi_1_1.get(), mi_1_2.get(), mi_1_3.get(), mi_1_4.get(), mi_1_5.get()]
+    mi_2= [mi_2_1.get(), mi_2_2.get(), mi_2_3.get()]
+    mi = [mi_1, mi_2, mi_3.get(), mi_4.get(), mi_5.get(), mi_6.get(), mi_7.get(), mi_8.get() ]
     K = K_Solver.solve_K(lambda_0, mi)
 
     result_val_1['text']= print_result(K[1])
@@ -69,8 +79,37 @@ def add_entry(master, label_text, text_variable):
     label = Label(frame, text=label_text, width = 8)
     label.pack(side=LEFT)
 
-    entry = Entry(frame, textvariable = text_variable)
+    entry = Entry(frame, textvariable = text_variable, justify = CENTER, width = 20)
     entry.pack(side=RIGHT)
+
+    frame.pack(fill=X)
+
+def add_entry_2(master, label_text, text_variable_1, text_variable_2, text_variable_3, text_variable_4, text_variable_5):
+    frame = Frame(master)
+
+    label = Label(frame, text = label_text, width = 8)
+    label.pack(side=LEFT)
+
+    entry1 = Entry(frame, textvariable = text_variable_1, justify = CENTER, width = 3)
+    entry1.pack(side=LEFT)
+
+    entry2 = Entry(frame, textvariable = text_variable_2, justify = CENTER, width = 3)
+    entry2.pack(side=LEFT)
+
+    entry3 = Entry(frame, textvariable = text_variable_3, justify = CENTER, width = 3)
+    entry3.pack(side=LEFT)
+
+    if text_variable_4 == mi_2_4:
+        entry4 = Entry(frame, textvariable = text_variable_4, justify = CENTER, width = 3, state=DISABLED)
+    else:
+        entry4 = Entry(frame, textvariable = text_variable_4, justify = CENTER, width = 3)
+    entry4.pack(side=LEFT)
+
+    if text_variable_5 == mi_2_5:
+        entry5 = Entry(frame, textvariable = text_variable_5, justify = CENTER, width = 3, state=DISABLED)
+    else:
+        entry5 = Entry(frame, textvariable = text_variable_5, justify = CENTER, width = 3)
+    entry5.pack(side=LEFT)
 
     frame.pack(fill=X)
 
@@ -86,8 +125,8 @@ add_entry(lambdas_frame, 'Klasa 5', lambda_5_0)
 mi_frame = Frame(root, relief='raised', borderwidth=1)
 mi_frame.grid(row = 1, column = 0)
 add_heading(mi_frame, u'\u03BC')
-add_entry(mi_frame, 'System 1', mi_1)
-add_entry(mi_frame, 'System 2', mi_2)
+add_entry_2(mi_frame, 'System 1', mi_1_1, mi_1_2, mi_1_3, mi_1_4, mi_1_5)
+add_entry_2(mi_frame, 'System 2', mi_2_1, mi_2_2, mi_2_3, mi_2_4, mi_2_5)
 add_entry(mi_frame, 'System 3', mi_3)
 add_entry(mi_frame, 'System 4', mi_4)
 add_entry(mi_frame, 'System 5', mi_5)

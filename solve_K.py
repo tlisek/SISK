@@ -22,7 +22,17 @@ def solve_K(lambda_0, mi):
     lam = Lambda_Solver.Solve_Lambda(lambda_0)
 
     mi_1 = mi[0]
+    mi_1_1 = mi_1[0]
+    mi_1_2 = mi_1[1]
+    mi_1_3 = mi_1[2]
+    mi_1_4 = mi_1[3]
+    mi_1_5 = mi_1[4]
     mi_2 = mi[1]
+    mi_2_1 = mi_2[0]
+    mi_2_2 = mi_2[1]
+    mi_2_3 = mi_2[2]
+    # mi_2_4 = mi_2[3]
+    # mi_2_5 = mi_2[4]
     mi_3 = mi[2]
     mi_4 = mi[3]
     mi_5 = mi[4]
@@ -34,19 +44,19 @@ def solve_K(lambda_0, mi):
     # System 1 - Typ IS
     print "System 1:"
     # Klasa 1
-    K_1_1 = calc_K_IS(lam[1][1], mi_1)
+    K_1_1 = calc_K_IS(lam[1][1], mi_1_1)
 
     # Klasa 2
-    K_1_2 = calc_K_IS(lam[1][2], mi_1)
+    K_1_2 = calc_K_IS(lam[1][2], mi_1_2)
 
     # Klasa 3
-    K_1_3 = calc_K_IS(lam[1][3], mi_1)
+    K_1_3 = calc_K_IS(lam[1][3], mi_1_3)
 
     # Klasa 4
-    K_1_4 = calc_K_IS(lam[1][4], mi_1)
+    K_1_4 = calc_K_IS(lam[1][4], mi_1_4)
 
     # Klasa 5
-    K_1_5 = calc_K_IS(lam[1][5], mi_1)
+    K_1_5 = calc_K_IS(lam[1][5], mi_1_5)
 
     print [K_1_1, K_1_2, K_1_3, K_1_4, K_1_5]
 
@@ -55,19 +65,19 @@ def solve_K(lambda_0, mi):
     print "System 2:"
 
     #Klasa 1
-    K_2_1 = calc_K_IS(lam[2][1], mi_2)
+    K_2_1 = calc_K_IS(lam[2][1], mi_2_1)
 
     #Klasa 2
-    K_2_2 = calc_K_IS(lam[2][2], mi_2)
+    K_2_2 = calc_K_IS(lam[2][2], mi_2_2)
 
     #Klasa 3
-    K_2_3 = calc_K_IS(lam[2][3], mi_2)
+    K_2_3 = calc_K_IS(lam[2][3], mi_2_3)
 
     #Klasa 4
     #W systemie 2 nie ma klasy 4
 
     #Klasa 5
-    #W systemie 2 nie ma klasy 4
+    #W systemie 2 nie ma klasy 5
 
     print [K_2_1, K_2_2, K_2_3]
 
