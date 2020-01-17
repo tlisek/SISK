@@ -44,24 +44,24 @@ def runBtnCallback():
     mi = [mi_1, mi_2, mi_3.get(), mi_4.get(), mi_5.get(), mi_6.get(), mi_7.get(), mi_8.get() ]
     K = K_Solver.solve_K(lambda_0, mi)
     T = T_Solver.solve_T(lambda_0, K)
-    
-    result_val_1['text']= print_system_result(K[1])
-    result_val_2['text']= print_system_result(K[2])
-    result_val_3['text']= print_system_result(K[3])
-    result_val_4['text']= print_system_result(K[4])
-    result_val_5['text']= print_system_result(K[5])
-    result_val_6['text']= print_system_result(K[6])
-    result_val_7['text']= print_system_result(K[7])
-    result_val_8['text']= print_system_result(K[8])
 
-def print_system_result(K):
+    result_val_1['text']= print_system_result("K",K[1])
+    result_val_2['text']= print_system_result("K",K[2])
+    result_val_3['text']= print_system_result("K",K[3])
+    result_val_4['text']= print_system_result("K",K[4])
+    result_val_5['text']= print_system_result("K",K[5])
+    result_val_6['text']= print_system_result("K",K[6])
+    result_val_7['text']= print_system_result("K",K[7])
+    result_val_8['text']= print_system_result("K",K[8])
+
+def print_system_result(identificator, K):
     result = ""
     for (value,i) in zip(K.values(), range(6)):
         # print value
         if value == None:
-            tmp = "K"+str(i+1)+" : -- "
+            tmp = identificator+str(i+1)+" : -- "
         else:
-            tmp = "K"+str(i+1)+": " + "{0:.2f} ".format(round(value,2))
+            tmp = identificator+str(i+1)+": " + "{0:.2f} ".format(round(value,2))
         result += tmp
 
     return result
