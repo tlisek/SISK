@@ -1,12 +1,18 @@
+import solve_lambda as Lambda_Solver
+
 def solve_W(lambda_0, Q):
-        W = {
-            1 : { 1: 0, 2: 0, 3: 3, 4: 4, 5: 5},
-            2 : { 1: 0, 2: 0, 3: 8, 4: None, 5: None},
-            3 : { 1: 0, 2: 0, 3: 3, 4: None, 5: None},
-            4 : { 1: 0, 2: None, 3: None, 4: None, 5: None},
-            5 : { 1: 0, 2: 0, 3: None, 4: None, 5: None},
-            6 : { 1: None, 2: None, 3: None, 4: 4, 5: None},
-            7 : { 1: None, 2: None, 3: 3, 4: None, 5: None},
-            8 : { 1: None, 2: None, 3: None, 4: None, 5: 6},
-        }
-        return W
+
+    lam = Lambda_Solver.Solve_Lambda(lambda_0)
+
+    print "---solve_W---"
+
+
+    W={}
+    for (sys,i) in zip(Q.values(), range(8)):
+        W_sys = {}
+        for (Q_value, j) in zip(sys.values(), range(6)):
+            if Q_value != None: W_sys[j+1]=Q_value/lam[i+1][j+1]
+            else: W_sys[j+1]=None
+        W[i+1] = W_sys
+
+    return W

@@ -11,10 +11,13 @@ def calc_K_FIFO(m_i, ro_i_r, ro_i):
     for k in range(0,m_i):
         sum += 1.0 * ((m_i*ro_i)**k) / math.factorial(k)
 
-    return m_i*ro_i_r + ro_i_r/(1-ro_i) * ((m_i*ro_i)**m_i) / ( math.factorial(m_i)*(1-ro_i) ) * 1/( sum + (((m_i*ro_i)**m_i)/(math.factorial(m_i)) ) * (1/(1-ro_i)) )
+    K = m_i*ro_i_r + ro_i_r/(1-ro_i) * ((m_i*ro_i)**m_i) / ( math.factorial(m_i)*(1-ro_i) ) * 1/( sum + (((m_i*ro_i)**m_i)/(math.factorial(m_i)) ) * (1/(1-ro_i)) )
+
+    return max(K, 0)
 
 def calc_K_IS(lam_i_r,mi_i):
-    return lam_i_r/mi_i
+    K = lam_i_r/mi_i
+    return max(K, 0)
 
 
 def solve_K(lambda_0, mi):
@@ -174,7 +177,7 @@ def solve_K(lambda_0, mi):
     #W systemie 6 nie ma klasy 5
 
     ro_6 = ro_6_4
-    K_6_4 = calc_K_FIFO(m_6, ro_6_4, ro_4)
+    K_6_4 = calc_K_FIFO(m_6, ro_6_4, ro_6)
     print [K_6_4]
 
 
