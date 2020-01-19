@@ -17,6 +17,9 @@ def read_A_matrix(input_file):
 
 def Solve_Lambda(lambda_0):
 
+    print "Lambda 0"
+    print lambda_0
+
     lam_0_1 = lambda_0[0]
     lam_0_2 = lambda_0[1]
     lam_0_3 = lambda_0[2]
@@ -51,7 +54,7 @@ def Solve_Lambda(lambda_0):
     #     [1, 0, 0, 0]
     # ]
     A_list = read_A_matrix('input_data/A2.txt')
-    b_list = [[0],[0],[0],[lam_0_2]]
+    b_list = [[-lam_0_2],[0],[0],[0]]
 
     A = np.array(A_list)
     b = np.array(b_list)
@@ -71,7 +74,7 @@ def Solve_Lambda(lambda_0):
     #     [1, 0, 0, 0]
     # ]
     A_list = read_A_matrix('input_data/A3.txt')
-    b_list = [[0],[0],[0],[lam_0_3]]
+    b_list = [[-lam_0_3],[0],[0],[0]]
 
     A = np.array(A_list)
     b = np.array(b_list)
@@ -90,7 +93,7 @@ def Solve_Lambda(lambda_0):
     #     [1, 0]
     # ]
     A_list = read_A_matrix('input_data/A4.txt')
-    b_list = [[0], [lam_0_4]]
+    b_list = [[-lam_0_4],[0]]
 
     A = np.array(A_list)
     b = np.array(b_list)
@@ -108,7 +111,7 @@ def Solve_Lambda(lambda_0):
     #     [1, 0]
     # ]
     A_list = read_A_matrix('input_data/A5.txt')
-    b_list = [[0], [lam_0_5]]
+    b_list = [[-lam_0_5],[0]]
 
     A = np.array(A_list)
     b = np.array(b_list)
@@ -131,5 +134,10 @@ def Solve_Lambda(lambda_0):
         7 : { 1: None, 2: None, 3: lam_3[3], 4: None, 5: None},
         8 : { 1: None, 2: None, 3: None, 4: None, 5: lam_5[1]},
     }
+
+    print "Lambda"
+
+    for key in lam:
+        print lam[key]
 
     return lam
