@@ -7,7 +7,7 @@ def calc_Pi0_FIFO(m_i, ro_i_r):
     for k in range(0,m_i):
         sum += 1.0 * ((ro_i_r)**k) / math.factorial(k)
 
-    print [sum, m_i, ro_i_r]
+    #print [sum, m_i, ro_i_r]
 
     return 1.0 / ( sum + ( (ro_i_r**m_i)/( math.factorial(m_i-1) * (m_i - ro_i_r ) ) ) )
 

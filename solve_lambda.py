@@ -17,8 +17,8 @@ def read_A_matrix(input_file):
 
 def Solve_Lambda(lambda_0):
 
-    print "Lambda 0"
-    print lambda_0
+    # print "Lambda 0"
+    # print lambda_0
 
     lam_0_1 = lambda_0[0]
     lam_0_2 = lambda_0[1]
@@ -135,9 +135,9 @@ def Solve_Lambda(lambda_0):
         8 : { 1: None, 2: None, 3: None, 4: None, 5: lam_5[1]},
     }
 
-    print "Lambda"
+    # print "Lambda"
 
-    for key in lam:
-        print lam[key]
+    # for key in lam:
+    #     print lam[key]
 
     return lam
